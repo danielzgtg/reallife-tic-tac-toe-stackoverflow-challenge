@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" stroke="#000" stroke-linecap="round" stroke-width="10" fill="none">
+<filter id="f">
+  <feTurbulence type="fractalNoise" baseFrequency=".1" numOctaves="5" stitchTiles="stitch"/>
+  <feColorMatrix values=".2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2" />
+  <feComponentTransfer>
+    <feFuncR type="discrete" tableValues="0 .8 1"/>
+    <feFuncG type="discrete" tableValues="0 .8 1"/>
+    <feFuncB type="discrete" tableValues="0 .8 1"/>
+    <feFuncA type="discrete" tableValues="0 .2 1"/>
+  </feComponentTransfer>
+  <feBlend mode="soft-light" in="SourceGraphic"/>
+</filter>
+<style>
+  svg { background-color: #fff; }
+  ellipse { transform-origin: center; transform-box: fill-box; }
+</style>
+<g filter="url(#f)">
+  <path d="m300 0v900m300 0v-900m300 300h-900m0 300h900" style="stroke-width:5"/>
+  <ellipse cx="155.7862019" cy="163.1160547" rx="80.24386782" ry="76.85707688" style="transform:rotate(-1.283448028rad)"/>
+  <line x1="692.6857104" x2="799.0677551" y1="104.7280987" y2="211.3485046"/>
+  <line x1="819.1137069" x2="691.2058145" y1="102.4521447" y2="232.6034504"/>
+  <line x1="104.2945412" x2="209.2336272" y1="680.8658521" y2="784.9966581"/>
+  <line x1="226.8900377" x2="103.2481042" y1="682.3494588" y2="804.2625274"/>
+</g>
+</svg>

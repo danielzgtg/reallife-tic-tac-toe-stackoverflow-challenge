@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" stroke="#000" stroke-linecap="round" stroke-width="10" fill="none">
+<filter id="f">
+  <feTurbulence type="fractalNoise" baseFrequency=".1" numOctaves="5" stitchTiles="stitch"/>
+  <feColorMatrix values=".2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2 .2" />
+  <feComponentTransfer>
+    <feFuncR type="discrete" tableValues="0 .8 1"/>
+    <feFuncG type="discrete" tableValues="0 .8 1"/>
+    <feFuncB type="discrete" tableValues="0 .8 1"/>
+    <feFuncA type="discrete" tableValues="0 .2 1"/>
+  </feComponentTransfer>
+  <feBlend mode="soft-light" in="SourceGraphic"/>
+</filter>
+<style>ellipse { transform-origin: center; }</style>
+<g filter="url(#f)">
+  <path d="m300 0v900m300 0v-900m300 300h-900m0 300h900" style="stroke-width:5"/>
+  <line x1="230" x2="70" y1="70" y2="230"/>
+  <line x1="70" x2="230" y1="70" y2="230" stroke="#f00"/>
+  <ellipse cx="450" cy="450" rx="90" ry="80" style="transform:rotate(0rad)"/>
+</g>
+</svg>
